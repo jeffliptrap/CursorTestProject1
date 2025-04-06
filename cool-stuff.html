@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Stuff - Animation and Make It Epic!</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: #000000 url('https://media.giphy.com/media/xUPGcyTe2I8FvXy9EI/giphy.gif') center center;
+            background-size: cover;
+            font-family: "Comic Sans MS", cursive;
+            overflow: hidden;
+            color: #fff;
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .title {
+            font-size: 48px;
+            text-align: center;
+            text-shadow: 2px 2px 0 #ff00ff;
+            margin: 20px;
+        }
+
+        .cool-text {
+            font-size: 24px;
+            margin: 10px;
+            animation: bounce 1s infinite;
+        }
+
+        .menu {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .menu-item {
+            background: linear-gradient(to bottom, #ff00ff, #00ffff);
+            padding: 10px 20px;
+            border: 3px outset #ffffff;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+
+        .cool-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 800px;
+        }
+
+        .cool-item {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #ff00ff;
+            animation: float 3s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(5deg); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="menu">
+            <a href="index.html" class="menu-item">Home</a>
+            <a href="cool-stuff.html" class="menu-item">Cool Stuff</a>
+            <a href="downloads.html" class="menu-item">Downloads</a>
+            <a href="guestbook.html" class="menu-item">Guestbook</a>
+        </nav>
+
+        <h1 class="title">Cool Animation Stuff!</h1>
+
+        <div class="cool-container">
+            <div class="cool-item">
+                <h2 class="cool-text">Bouncing Text</h2>
+                <p>Watch this text bounce up and down!</p>
+            </div>
+            <div class="cool-item">
+                <h2 class="cool-text">Floating Box</h2>
+                <p>This box floats and rotates!</p>
+            </div>
+            <div class="cool-item">
+                <h2 class="cool-text">Amazing Effects</h2>
+                <p>Check out these rad animations!</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
